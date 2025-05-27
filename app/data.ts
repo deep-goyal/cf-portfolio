@@ -29,48 +29,74 @@ type SocialLink = {
 
 export const PROJECTS: Project[] = [
   {
-    name: 'Motion Primitives Pro',
+    name: 'Bentune',
     description:
-      'Advanced components and templates to craft beautiful websites.',
-    link: 'https://pro.motion-primitives.com/',
+      'An instruction-tuned large language model that excels in math and logic.',
+    link: '/project/bentune',
     video:
-      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
+      'https://res.cloudinary.com/dnt3ngxyp/video/upload/v1748353514/BenTune_jlffzg.mp4',
     id: 'project1',
   },
   {
-    name: 'Motion Primitives',
-    description: 'UI kit to make beautiful, animated interfaces.',
-    link: 'https://motion-primitives.com/',
+    name: 'Crisis Companion',
+    description: 'An app that helps users stuck in disasters find resources and shelter.',
+    link: '/project/crisis-companion',
     video:
-      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0',
+      'https://res.cloudinary.com/dnt3ngxyp/video/upload/v1748337472/HackHarvardLogoScene_mt7aox.mp4',
     id: 'project2',
+  },
+  {
+    name: 'Verbalist.ai',
+    description: 'A VS Code extension that helps disabled users make text edits using their voice.',
+    link: '/project/verbalist',
+    video:
+      'https://res.cloudinary.com/dnt3ngxyp/video/upload/v1748338298/CalHacksScene_nuali1.mp4',
+    id: 'project3',
+  },
+  {
+    name: 'Open Spot Notifier',
+    description: 'A script that notifies ASU students when a class spot opens through discordpy.',
+    link: '/project/open-spot-notifier',
+    video:
+      'https://res.cloudinary.com/dnt3ngxyp/video/upload/v1748355338/ASUScene_rw1uio.mp4',
+    id: 'project4',
   },
 ]
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
-    company: 'Reglazed Studio',
-    title: 'CEO',
-    start: '2024',
+    company: 'Arizona State University',
+    title: 'Teaching Assistant',
+    start: '2023',
     end: 'Present',
-    link: 'https://ibelick.com',
+    link: '/work/ta',
     id: 'work1',
+
   },
+  // {
+  //   company: 'Sport Sitters',
+  //   title: 'Software Engineer Intern',
+  //   start: 'Jun 2025',
+  //   end: 'Aug 2025',
+  //   link: 'https://ibelick.com',
+  //   id: 'work2',
+  //
+  // },
   {
-    company: 'Freelance',
-    title: 'Design Engineer',
-    start: '2022',
-    end: '2024',
-    link: 'https://ibelick.com',
-    id: 'work2',
-  },
-  {
-    company: 'Freelance',
-    title: 'Front-end Developer',
-    start: '2017',
-    end: 'Present',
-    link: 'https://ibelick.com',
+    company: 'Infomaze Technologies',
+    title: 'Software Engineer Intern',
+    start: 'Jun 2024',
+    end: 'Aug 2024',
+    link: '/work/infomaze',
     id: 'work3',
+  },
+  {
+    company: 'ASU Automation projects',
+    title: 'Software Engineer Intern',
+    start: 'Jan 2023',
+    end: 'Dec 2023',
+    link: '/work/pnards',
+    id: 'work4',
   },
 ]
 
@@ -106,20 +132,16 @@ export const BLOG_POSTS: BlogPost[] = [
 export const SOCIAL_LINKS: SocialLink[] = [
   {
     label: 'Github',
-    link: 'https://github.com/ibelick',
-  },
-  {
-    label: 'Twitter',
-    link: 'https://twitter.com/ibelick',
+    link: 'https://github.com/deep-goyal',
   },
   {
     label: 'LinkedIn',
-    link: 'https://www.linkedin.com/in/ibelick',
+    link: 'https://www.linkedin.com/in/deep-goyal',
   },
   {
     label: 'Instagram',
-    link: 'https://www.instagram.com/ibelick',
+    link: 'https://www.instagram.com/thegodoflols',
   },
 ]
 
-export const EMAIL = 'your@email.com'
+export const EMAIL = 'deepgoyal.work@gmail.com'

@@ -100,6 +100,7 @@ function MagneticSocialLink({
     <Magnetic springOptions={{ bounce: 0 }} intensity={0.3}>
       <a
         href={link}
+        target={"_blank"}
         className="group relative inline-flex shrink-0 items-center gap-[1px] rounded-full bg-zinc-100 px-2.5 py-1 text-sm text-black transition-colors duration-200 hover:bg-zinc-950 hover:text-zinc-50 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700"
       >
         {children}
@@ -137,8 +138,8 @@ export default function Personal() {
       >
         <div className="flex-1">
           <p className="text-zinc-600 dark:text-zinc-400">
-            Focused on creating intuitive and performant web experiences.
-            Bridging the gap between design and development.
+            Final Year Undergraduate Student from Arizona State University with
+            Three Years of Fun Experience in Software Engineering.
           </p>
         </div>
       </motion.section>
@@ -147,7 +148,7 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium">Selected Projects</h3>
+        <h3 className="mb-5 text-lg font-medium">Latest Projects</h3>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {PROJECTS.map((project) => (
             <div key={project.name} className="space-y-2">
@@ -158,7 +159,6 @@ export default function Personal() {
                 <a
                   className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50"
                   href={project.link}
-                  target="_blank"
                 >
                   {project.name}
                   <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 dark:bg-zinc-50 transition-all duration-200 group-hover:max-w-full"></span>
@@ -182,7 +182,6 @@ export default function Personal() {
             <a
               className="relative overflow-hidden rounded-2xl bg-zinc-300/30 p-[1px] dark:bg-zinc-600/30"
               href={job.link}
-              target="_blank"
               rel="noopener noreferrer"
               key={job.id}
             >
@@ -210,41 +209,41 @@ export default function Personal() {
         </div>
       </motion.section>
 
-      <motion.section
-        variants={VARIANTS_SECTION}
-        transition={TRANSITION_SECTION}
-      >
-        <h3 className="mb-3 text-lg font-medium">Blog</h3>
-        <div className="flex flex-col space-y-0">
-          <AnimatedBackground
-            enableHover
-            className="h-full w-full rounded-lg bg-zinc-100 dark:bg-zinc-900/80"
-            transition={{
-              type: 'spring',
-              bounce: 0,
-              duration: 0.2,
-            }}
-          >
-            {BLOG_POSTS.map((post) => (
-              <Link
-                key={post.uid}
-                className="-mx-3 rounded-xl px-3 py-3"
-                href={post.link}
-                data-id={post.uid}
-              >
-                <div className="flex flex-col space-y-1">
-                  <h4 className="font-normal dark:text-zinc-100">
-                    {post.title}
-                  </h4>
-                  <p className="text-zinc-500 dark:text-zinc-400">
-                    {post.description}
-                  </p>
-                </div>
-              </Link>
-            ))}
-          </AnimatedBackground>
-        </div>
-      </motion.section>
+      {/*<motion.section*/}
+      {/*  variants={VARIANTS_SECTION}*/}
+      {/*  transition={TRANSITION_SECTION}*/}
+      {/*>*/}
+      {/*  <h3 className="mb-3 text-lg font-medium">Blog</h3>*/}
+      {/*  <div className="flex flex-col space-y-0">*/}
+      {/*    <AnimatedBackground*/}
+      {/*      enableHover*/}
+      {/*      className="h-full w-full rounded-lg bg-zinc-100 dark:bg-zinc-900/80"*/}
+      {/*      transition={{*/}
+      {/*        type: 'spring',*/}
+      {/*        bounce: 0,*/}
+      {/*        duration: 0.2,*/}
+      {/*      }}*/}
+      {/*    >*/}
+      {/*      {BLOG_POSTS.map((post) => (*/}
+      {/*        <Link*/}
+      {/*          key={post.uid}*/}
+      {/*          className="-mx-3 rounded-xl px-3 py-3"*/}
+      {/*          href={post.link}*/}
+      {/*          data-id={post.uid}*/}
+      {/*        >*/}
+      {/*          <div className="flex flex-col space-y-1">*/}
+      {/*            <h4 className="font-normal dark:text-zinc-100">*/}
+      {/*              {post.title}*/}
+      {/*            </h4>*/}
+      {/*            <p className="text-zinc-500 dark:text-zinc-400">*/}
+      {/*              {post.description}*/}
+      {/*            </p>*/}
+      {/*          </div>*/}
+      {/*        </Link>*/}
+      {/*      ))}*/}
+      {/*    </AnimatedBackground>*/}
+      {/*  </div>*/}
+      {/*</motion.section>*/}
 
       <motion.section
         variants={VARIANTS_SECTION}
