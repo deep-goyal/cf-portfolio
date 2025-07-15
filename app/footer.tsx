@@ -73,8 +73,8 @@ export function Footer() {
         <a href="https://github.com/ibelick/nim" target="_blank">
           <TextLoop className="text-xs text-zinc-500">
             <span>© 2025 Goyal Deep.</span>
-            <span>Template shamelessly borrowed from Julien Nim.</span>
             <span>Videos created with Manim.</span>
+            <span>v3.1.0</span>
           </TextLoop>
         </a>
         <div className="text-xs text-zinc-400">

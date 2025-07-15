@@ -1,4 +1,5 @@
 'use client'
+import { useState, useEffect } from 'react'
 import { motion } from 'motion/react'
 import { XIcon } from 'lucide-react'
 import { Spotlight } from '@/components/ui/spotlight'
@@ -10,15 +11,13 @@ import {
   MorphingDialogClose,
   MorphingDialogContainer,
 } from '@/components/ui/morphing-dialog'
-import Link from 'next/link'
-import { AnimatedBackground } from '@/components/ui/animated-background'
 import {
   PROJECTS,
   WORK_EXPERIENCE,
-  BLOG_POSTS,
   EMAIL,
   SOCIAL_LINKS,
 } from './data'
+import { Progress } from "@/components/ui/progress"
 
 const VARIANTS_CONTAINER = {
   hidden: { opacity: 0 },
@@ -36,7 +35,7 @@ const VARIANTS_SECTION = {
 }
 
 const TRANSITION_SECTION = {
-  duration: 0.3,
+  duration: 2.5,
 }
 
 type ProjectVideoProps = {
@@ -125,6 +124,26 @@ function MagneticSocialLink({
 }
 
 export default function Personal() {
+  const [progress, setProgress] = useState(0)
+
+  useEffect(() => {
+    const startDate = new Date('2025-06-01').getTime();
+    const endDate = new Date('2025-08-13').getTime();
+
+    const updateProgress = () => {
+      const now = Date.now();
+      const percentage = Math.max(
+        0,
+        Math.min(
+          100,
+          ((now - startDate) / (endDate - startDate)) * 100
+        )
+      );
+      setProgress(percentage);
+    };
+    updateProgress();
+  }, []);
+
   return (
     <motion.main
       className="space-y-24"
@@ -139,7 +158,7 @@ export default function Personal() {
         <div className="flex-1">
           <p className="text-zinc-600 dark:text-zinc-400">
             Final Year Undergraduate Student from Arizona State University with
-            Three Years of Fun Experience in Software Engineering.
+            Three Years of Experience in Software Engineering.
           </p>
         </div>
       </motion.section>
@@ -148,7 +167,24 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium">Latest Projects</h3>
+
+          <h3 className="mb-5 text-lg text-green-500 font-medium">Now</h3>
+
+          <div className='space-y-4'>
+
+          <Progress value={progress} label={"Intern @Sport Sitters"} className="w-[100%]" />
+
+          </div>
+
+      </motion.section>
+
+      
+
+      <motion.section
+        variants={VARIANTS_SECTION}
+        transition={TRANSITION_SECTION}
+      >
+        <h3 className="mb-5 text-lg font-medium">Recent Projects</h3>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {PROJECTS.map((project) => (
             <div key={project.name} className="space-y-2">
@@ -180,7 +216,7 @@ export default function Personal() {
         <div className="flex flex-col space-y-2">
           {WORK_EXPERIENCE.map((job) => (
             <a
-              className="relative overflow-hidden rounded-2xl bg-zinc-300/30 p-[1px] dark:bg-zinc-600/30"
+              className="relative overflow-hidden rounded-2xl bg-zinc-300/30 dark:bg-zinc-600/30 p-[1px]"
               href={job.link}
               rel="noopener noreferrer"
               key={job.id}
